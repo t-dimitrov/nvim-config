@@ -12,6 +12,18 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- A TAB character looks like 4 spaces
+vim.opt.tabstop = 4
+
+-- Pressing the TAB key will insert spaces instead of a TAB character
+vim.opt.expandtab = true
+
+-- Number of spaces inserted instead of a TAB character
+vim.opt.softtabstop = 4
+
+-- Number of spaces inserted when indenting
+vim.opt.shiftwidth = 4
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -609,7 +621,7 @@ require("lazy").setup({
 					-- Accept ([y]es) the completion.
 					--  This will auto-import if your LSP supports it.
 					--  This will expand snippets if the LSP sent a snippet.
-					["<C-y>"] = cmp.mapping.confirm({ select = true }),
+					["<Tab>"] = cmp.mapping.confirm({ select = true }),
 
 					-- Manually trigger a completion from nvim-cmp.
 					--  Generally you don't need this, because nvim-cmp will display
