@@ -11,6 +11,9 @@ Open the Microsoft Store app and search for **Windows Terminal**
 winget install Microsoft.PowerShell
 ```
 
+### WezTerm
+Best cross platform terminal emulator: https://wezfurlong.org/wezterm/index.html
+
 ### NerdFont
 You can choose a nerd font from here https://www.nerdfonts.com/
 
