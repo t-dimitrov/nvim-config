@@ -6,3 +6,12 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- Auto enter insert mode and scroll to bottom when terminal opens
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "*",
+    callback = function()
+        vim.cmd("normal! G")         -- Scroll to bottom
+        vim.cmd("startinsert")       -- Enter terminal (insert) mode
+    end,
+})
